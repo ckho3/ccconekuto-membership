@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const profileAvatar = document.getElementById('profileAvatar');
     const logoutBtn = document.getElementById('logoutBtn');
     const logoutBtnText = document.getElementById('logoutBtnText');
+    const adminBtn = document.getElementById('adminBtn');
 
     // 認証チェック
     Auth.onAuthStateChange(async (user) => {
@@ -37,6 +38,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // ユーザー情報を表示
         await displayUserInfo(user);
+
+        // 管理者チェック
+        const adminEmails = ['l.erick@uubo.jp', 'ckho329@gmail.com'];
+        if (adminEmails.includes(user.email)) {
+            adminBtn.style.display = 'block';
+        }
     });
 
     // ログアウトボタンのイベントリスナー
@@ -44,6 +51,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (confirm('ログアウトしますか？')) {
             await handleLogout();
         }
+    });
+
+    // 管理者ページボタンのイベントリスナー
+    adminBtn.addEventListener('click', () => {
+        window.location.href = '/admin.html';
     });
 
     // ユーザー情報を表示

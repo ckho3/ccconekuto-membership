@@ -16,6 +16,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 const smaregiRouter = require('./routes/smaregi');
 app.use('/api/smaregi', smaregiRouter);
 
+// 管理者APIルーター
+const adminRouter = require('./routes/admin');
+app.use('/api/admin', adminRouter);
+
 // ルートパス
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
