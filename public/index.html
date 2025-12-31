@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTTドコモ</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-container">
+            <!-- ロゴ -->
+            <div class="header-logo">
+                <a href="/" class="logo-link">
+                    <img src="/ccc-logo.png" alt="CCコネクト" height="32">
+                </a>
+            </div>
+
+            <!-- メインナビゲーション -->
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">
+                            <span>商品・サービス</span>
+                            <svg class="nav-arrow" width="10" height="6" viewBox="0 0 10 6">
+                                <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="dropdown-section">
+                                    <h3 class="dropdown-title">モバイル</h3>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#">iPhone</a></li>
+                                        <li><a href="#">iPad</a></li>
+                                        <li><a href="#">Xperia</a></li>
+                                        <li><a href="#">Galaxy</a></li>
+                                        <li><a href="#">AQUOS</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-section">
+                                    <h3 class="dropdown-title">その他</h3>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#">Macbook</a></li>
+                                        <li><a href="#">WindowsPC</a></li>
+                                        <li><a href="#">イベント商品</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-section">
+                                    <h3 class="dropdown-title">買取・回収</h3>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#">ガジェット回収.com</a></li>
+                                        <li><a href="#">買取価格表</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-section">
+                                    <h3 class="dropdown-title">システム開発</h3>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#">爆速開発シリーズ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span>お知らせ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/corporate.html" class="nav-link">
+                            <span>企業情報</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/solutions.html" class="nav-link">
+                            <span>法人のお客さま</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 右側アクション -->
+            <div class="header-actions">
+                <a href="https://ccconekuto.com/" class="header-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="header-icon" width="18" height="18" viewBox="0 0 16 16">
+                        <path d="M13 6h-2V4c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v2H3c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h10c.6 0 1-.4 1-1V7c0-.6-.4-1-1-1zM7 4h2v2H7V4z" fill="currentColor"/>
+                    </svg>
+                    <span>オンラインショップ</span>
+                </a>
+                <a href="/login.html" class="btn-login" id="headerAuthBtn">
+                    <span id="headerAuthText">ログインする</span>
+                </a>
+            </div>
+
+            <!-- モバイルメニュートグル -->
+            <button class="menu-toggle" id="menuToggle">
+                <span class="menu-toggle-line"></span>
+                <span class="menu-toggle-line"></span>
+                <span class="menu-toggle-line"></span>
+                <span class="menu-toggle-text">MENU</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <!-- カルーセルセクション -->
+        <section class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide active">
+                        <a href="https://www.docomo.ne.jp/" class="slide-link">
+                            <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/image/main_pr/main_pr_253_pc_251127.png" alt="ドコモキャンペーン" class="slide-image">
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="https://www.docomo.ne.jp/" class="slide-link">
+                            <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/image/main_pr/main_pr_253_pc_251127.png" alt="ドコモキャンペーン" class="slide-image">
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="https://www.docomo.ne.jp/" class="slide-link">
+                            <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/image/main_pr/main_pr_253_pc_251127.png" alt="ドコモキャンペーン" class="slide-image">
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control prev" id="carouselPrev">‹</button>
+                <button class="carousel-control next" id="carouselNext">›</button>
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+                <button class="carousel-pause" id="carouselPause">一時停止</button>
+            </div>
+        </section>
+
+        <!-- よく利用されるサービス -->
+        <section class="services-section">
+            <div class="container">
+                <h2 class="section-title">よく利用されるサービス</h2>
+                <div class="services-grid">
+                    <a href="https://www.docomo.ne.jp/mydocomo/" class="service-item">
+                        <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/images/logo/cmn-rwd-my-docomo-logo.svg" alt="My docomo" class="service-icon-img">
+                        <span>My docomo</span>
+                    </a>
+                    <a href="https://onlineshop.smt.docomo.ne.jp/" class="service-item">
+                        <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/images/ico/cmn-rwd-online-shop-icon.svg" alt="オンラインショップ" class="service-icon-img">
+                        <span>オンラインショップ</span>
+                    </a>
+                    <a href="https://shop.smt.docomo.ne.jp/" class="service-item">
+                        <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/images/ico/cmn-rwd-docomo-shop-icon.svg" alt="ドコモショップ" class="service-icon-img">
+                        <span>ドコモショップ</span>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/charge/" class="service-item">
+                        <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/images/ico/cmn-rwd-price-yen-icon.svg" alt="料金・割引" class="service-icon-img">
+                        <span>料金・割引</span>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/product/" class="service-item">
+                        <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/images/ico/cmn-rwd-product-icon.svg" alt="製品" class="service-icon-img">
+                        <span>製品</span>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/support/" class="service-item">
+                        <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/images/ico/cmn-rwd-customer-support-icon.svg" alt="お客さまサポート" class="service-icon-img">
+                        <span>お客さまサポート</span>
+                    </a>
+                    <a href="https://dpoint.docomo.ne.jp/" class="service-item">
+                        <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/common/images/logo/cmn-rwd-d-point-club-logo.svg" alt="dポイントクラブ" class="service-icon-img">
+                        <span>dポイントクラブ</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 目的から探す -->
+        <section class="purpose-section">
+            <div class="container">
+                <div class="purpose-box">
+                    <h2 class="section-title">目的から探す</h2>
+                    <div class="purpose-grid">
+                        <a href="https://www.docomo.ne.jp/mydocomo/support/mail/" class="purpose-item">
+                            <div class="purpose-content">
+                                <span class="purpose-text">メールの設定を確認・変更したい</span>
+                                <svg class="external-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M12 2h2v2h-2V2zm0 4h2v8h-2V6zM2 2h8v2H2V2zm0 4h8v8H2V6z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.docomo.ne.jp/mydocomo/contract/" class="purpose-item">
+                            <div class="purpose-content">
+                                <span class="purpose-text">契約内容・利用状況を確認したい</span>
+                                <svg class="external-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M12 2h2v2h-2V2zm0 4h2v8h-2V6zM2 2h8v2H2V2zm0 4h8v8H2V6z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.docomo.ne.jp/charge/simulation/" class="purpose-item">
+                            <div class="purpose-content">
+                                <span class="purpose-text">携帯料金をシミュレーションしたい</span>
+                                <svg class="external-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M12 2h2v2h-2V2zm0 4h2v8h-2V6zM2 2h8v2H2V2zm0 4h8v8H2V6z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.docomo.ne.jp/hikari/checkup/" class="purpose-item">
+                            <div class="purpose-content">
+                                <span class="purpose-text">自宅のWi-Fi環境や料金を見直したい</span>
+                                <svg class="external-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M12 2h2v2h-2V2zm0 4h2v8h-2V6zM2 2h8v2H2V2zm0 4h8v8H2V6z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.docomo.ne.jp/support/inquiry/faq/" class="purpose-item">
+                            <div class="purpose-content">
+                                <span class="purpose-text">よくある質問（FAQ）を確認したい</span>
+                                <svg class="external-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M12 2h2v2h-2V2zm0 4h2v8h-2V6zM2 2h8v2H2V2zm0 4h8v8H2V6z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.docomo.ne.jp/charge/online_procedure/speed_mode/" class="purpose-item">
+                            <div class="purpose-content">
+                                <span class="purpose-text">速度制限を解除したい</span>
+                                <svg class="external-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M12 2h2v2h-2V2zm0 4h2v8h-2V6zM2 2h8v2H2V2zm0 4h8v8H2V6z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 商品・サービスのご案内 -->
+        <section class="tabs-section">
+            <div class="container">
+                <h2 class="section-title">商品・サービスのご案内</h2>
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="mobile">モバイル</button>
+                    <button class="tab-btn" data-tab="internet">インターネット回線・固定電話</button>
+                    <button class="tab-btn" data-tab="smart-life">スマートライフ</button>
+                    <button class="tab-btn" data-tab="energy">電気・ガス</button>
+                </div>
+                <div class="tabs-content">
+                    <!-- モバイル -->
+                    <div class="tab-panel active" id="mobile">
+                        <!-- キャンペーン・商品カード（統合） -->
+                        <div class="mobile-featured-grid">
+                            <a href="https://www.docomo.ne.jp/charge/eximo_max/?icid=CRP_TOP_bnr_to_CRP_CHA_eximo_max_22" class="featured-card">
+                                <div class="featured-image">
+                                    <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/home/images/bnr/mobile/mbnr_eximo_max_22.jpg" alt="22歳以下なら、ドコモ MAXが断然おトクに。">
+                                </div>
+                                <div class="featured-text">22歳以下なら、ドコモ MAXが断然おトクに。</div>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/charge/eximo_max/?icid=CRP_TOP_bnr_to_CRP_CHA_eximo_max_23_29" class="featured-card">
+                                <div class="featured-image">
+                                    <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/home/images/bnr/mobile/mbnr_eximo_max_23_29.jpg" alt="23～29歳なら、ドコモ MAXがおトクに！">
+                                </div>
+                                <div class="featured-text">23～29歳なら、ドコモ MAXがおトクに！</div>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/charge/eximo_max/benefits/?icid=CRP_TOP_bnr_to_CRP_CHA_eximo_max_benefits" class="featured-card">
+                                <div class="featured-image">
+                                    <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/home/images/bnr/mobile/mbnr_eximo_max_benefits.jpg" alt="ドコモ MAX、ドコモ ポイ活 MAXご契約者限定特典！">
+                                </div>
+                                <div class="featured-text">ドコモ MAX、ドコモ ポイ活 MAXご契約者限定特典！</div>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/iphone/17-pro/?icid=CRP_TOP_prd_to_CRP_IPH_17pro" class="featured-card">
+                                <div class="featured-image">
+                                    <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/home/images/bnr/mobile/prd_iphone17pro.jpg" alt="iPhone 17 Pro">
+                                </div>
+                                <div class="featured-text">iPhone 17 Pro</div>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/product/google_pixel/?icid=CRP_TOP_prd_to_CRP_PRD_google_pixel" class="featured-card">
+                                <div class="featured-image">
+                                    <img src="https://www.docomo.ne.jp/assets/content/dam/corp/jp/ja/home/images/bnr/mobile/prd_google_pixel.jpg" alt="新しいGoogle Pixelをドコモで楽しもう！">
+                                </div>
+                                <div class="featured-text">新しいGoogle Pixelをドコモで楽しもう！</div>
+                            </a>
+                        </div>
+
+                        <!-- サービスリンク -->
+                        <div class="service-links-grid">
+                            <a href="https://www.docomo.ne.jp/iphone/?icid=CRP_TOP_txt01_to_CRP_IPH" class="service-link-item">
+                                <span>iPhone</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/ipad/?icid=CRP_TOP_txt01_to_CRP_IPA" class="service-link-item">
+                                <span>iPad</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/product/?icid=CRP_TOP_txt01_to_CRP_PRD" class="service-link-item">
+                                <span>製品</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/charge/?icid=CRP_TOP_txt01_to_CRP_CHA" class="service-link-item">
+                                <span>料金・割引</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/service/?icid=CRP_TOP_txt01_to_CRP_SER" class="service-link-item">
+                                <span>サービス・機能</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/area/?icid=CRP_TOP_txt01_to_CRP_ARE" class="service-link-item">
+                                <span>通信・エリア</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/campaign_event/?icid=CRP_TOP_txt01_to_CRP_CAM" class="service-link-item">
+                                <span>キャンペーン・特典</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- インターネット回線・固定電話 -->
+                    <div class="tab-panel" id="internet">
+                        <div class="service-links-grid">
+                            <a href="https://www.docomo.ne.jp/internet/?icid=CRP_TOP_txt01_to_CRP_INT" class="service-link-item">
+                                <span>トップページ</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/internet/hikari/?icid=CRP_TOP_txt01_to_CRP_INT_hikari" class="service-link-item">
+                                <span>ドコモ光</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/internet/ahamo_hikari/?icid=CRP_TOP_txt01_to_CRP_INT_ahamo_hikari" class="service-link-item">
+                                <span>ahamo光</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/home_5g/?icid=CRP_TOP_txt01_to_CRP_home_5g" class="service-link-item">
+                                <span>home 5G</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.docomo.ne.jp/home_denwa/?icid=CRP_TOP_txt01_to_CRP_home_denwa" class="service-link-item">
+                                <span>homeでんわ</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- スマートライフ -->
+                    <div class="tab-panel" id="smart-life">
+                        <div class="smartlife-categories">
+                            <div class="smartlife-category">
+                                <h3 class="category-title">決済・保険・投資</h3>
+                                <div class="service-links-grid">
+                                    <a href="https://dcard.docomo.ne.jp/st/dcard_lineup/index.html?icid=CRP_TOP_to_CRP_SER_dcard" class="service-link-item">
+                                        <span>dカード</span>
+                                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                            <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.docomo.ne.jp/service/d_payment/?icid=CRP_TOP_to_CRP_SER_d_payment" class="service-link-item">
+                                        <span>d払い</span>
+                                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                            <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.docomo.ne.jp/service/dsploan/?icid=CRP_TOP_to_CRP_SER_dsploan" class="service-link-item">
+                                        <span>dスマホローン</span>
+                                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                            <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="smartlife-category">
+                                <h3 class="category-title">エンターテインメント</h3>
+                                <div class="service-links-grid">
+                                    <a href="https://www.docomo.ne.jp/service/lemino/?icid=CRP_TOP_to_CRP_SER_lemino" class="service-link-item">
+                                        <span>Lemino</span>
+                                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                            <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.docomo.ne.jp/service/docomo_toto/?icid=CRP_TOP_to_CRP_SER_docomo_toto" class="service-link-item">
+                                        <span>ドコモスポーツくじ</span>
+                                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                            <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.docomo.ne.jp/service/disneyplus/?icid=CRP_TOP_to_CRP_SER_disneyplus" class="service-link-item">
+                                        <span>ディズニープラス</span>
+                                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                            <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.docomo.ne.jp/service/dazn/?icid=CRP_TOP_to_CRP_SER_dazn" class="service-link-item">
+                                        <span>DAZN for docomo</span>
+                                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                            <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 電気・ガス -->
+                    <div class="tab-panel" id="energy">
+                        <div class="service-links-grid">
+                            <a href="https://www.docomo.ne.jp/denki/?icid=CRP_TOP_txt01_to_CRP_denki" class="service-link-item">
+                                <span>トップページ</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://denki.docomo.ne.jp/plan/green/?icid=CRP_TOP_to_CRP_denki_green" class="service-link-item">
+                                <span>ドコモでんき Green</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://denki.docomo.ne.jp/plan/basic/?icid=CRP_TOP_to_CRP_denki_basic" class="service-link-item">
+                                <span>ドコモでんき Basic</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://denki.docomo.ne.jp/gas/?icid=CRP_TOP_to_CRP_gas" class="service-link-item">
+                                <span>ドコモ ガス</span>
+                                <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M6 4l4 4-4 4" stroke="currentColor" fill="none" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- おすすめ -->
+        <section class="recommend-section">
+            <div class="container">
+                <h2 class="section-title">おすすめ！</h2>
+                <div class="recommend-grid">
+                    <a href="https://service.smt.docomo.ne.jp/keitai_payment/topics/dcard/" class="recommend-card">
+                        <div class="recommend-image">
+                            <img src="https://assets.content.dam/corp/jp/ja/home/images/recommend/recommend_bnr_43_250813.png" alt="d払い×dカード">
+                        </div>
+                        <h3>ポイントを最大3重取り！d払い×dカードの活用法</h3>
+                    </a>
+                    <a href="https://dpoint.docomo.ne.jp/cp_6/dpoint_life/tsukau.html" class="recommend-card">
+                        <div class="recommend-image">
+                            <img src="https://assets.content.dam/corp/jp/ja/home/images/recommend/recommend_bnr_44_250813.jpg" alt="dポイント活用ガイド">
+                        </div>
+                        <h3>dポイントがつかえるお店や、便利なつかい方をご紹介！</h3>
+                    </a>
+                    <a href="https://ssw.web.docomo.ne.jp/prime/" class="recommend-card">
+                        <div class="recommend-image">
+                            <img src="https://assets.content.dam/corp/jp/ja/home/images/recommend/recommend_bnr_37_250422.jpg" alt="Amazonプライム">
+                        </div>
+                        <h3>ドコモからAmazonプライム登録で毎月dポイント還元！</h3>
+                    </a>
+                    <a href="https://nttdocomo-ssw.com/nssw/dhkr/home-router/" class="recommend-card">
+                        <div class="recommend-image">
+                            <img src="https://assets.content.dam/corp/jp/ja/home/images/recommend/recommend_bnr_42_250613.png" alt="home 5G">
+                        </div>
+                        <h3>工事不要でコンセントに挿すだけ！「home 5G」</h3>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/service/lemino/" class="recommend-card">
+                        <div class="recommend-image">
+                            <img src="https://assets.content.dam/corp/jp/ja/home/images/recommend/recommend_bnr_17_230522.jpg" alt="Lemino">
+                        </div>
+                        <h3>知らなかった大好きに出会える新しい映像配信サービス</h3>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/support/cs/" class="recommend-card">
+                        <div class="recommend-image">
+                            <img src="https://assets.content.dam/corp/jp/ja/home/images/recommend/recommend_bnr_42_241216.png" alt="ドコモ改善活動">
+                        </div>
+                        <h3>改善事例をご紹介。お客さまのアイデアも募集しています！</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- お知らせ -->
+        <section class="news-section">
+            <div class="container">
+                <h2 class="section-title">お知らせ</h2>
+                <div class="news-box">
+                    <ul class="news-list">
+                        <li class="news-item">
+                            <span class="news-date">2025.12.27</span>
+                            <a href="https://www.docomo.ne.jp/info/news_release/" class="news-link">
+                                <span class="news-category news-category-important">重要</span>
+                                <span class="news-title">年末年始のサポート窓口営業時間について</span>
+                            </a>
+                        </li>
+                        <li class="news-item">
+                            <span class="news-date">2025.12.20</span>
+                            <a href="https://www.docomo.ne.jp/info/news_release/" class="news-link">
+                                <span class="news-category news-category-release">報道発表</span>
+                                <span class="news-title">5Gサービスエリア拡大のお知らせ</span>
+                            </a>
+                        </li>
+                        <li class="news-item">
+                            <span class="news-date">2025.12.15</span>
+                            <a href="https://www.docomo.ne.jp/info/construction/" class="news-link">
+                                <span class="news-category news-category-maintenance">工事情報</span>
+                                <span class="news-title">ネットワーク設備メンテナンス実施のご案内</span>
+                            </a>
+                        </li>
+                        <li class="news-item">
+                            <span class="news-date">2025.12.10</span>
+                            <a href="https://www.docomo.ne.jp/info/update/" class="news-link">
+                                <span class="news-category news-category-update">アップデート</span>
+                                <span class="news-title">Android端末向けソフトウェアアップデート情報</span>
+                            </a>
+                        </li>
+                        <li class="news-item">
+                            <span class="news-date">2025.12.05</span>
+                            <a href="https://www.docomo.ne.jp/info/news_release/" class="news-link">
+                                <span class="news-category news-category-campaign">キャンペーン</span>
+                                <span class="news-title">冬の新料金プランキャンペーン開始</span>
+                            </a>
+                        </li>
+                        <li class="news-item">
+                            <span class="news-date">2025.12.01</span>
+                            <a href="https://www.docomo.ne.jp/info/news_release/" class="news-link">
+                                <span class="news-category news-category-release">報道発表</span>
+                                <span class="news-title">新型スマートフォン発売のお知らせ</span>
+                            </a>
+                        </li>
+                        <li class="news-item">
+                            <span class="news-date">2025.11.25</span>
+                            <a href="https://www.docomo.ne.jp/info/" class="news-link">
+                                <span class="news-category news-category-service">サービス</span>
+                                <span class="news-title">dポイント還元率アップキャンペーン</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="news-more">
+                        <a href="https://www.docomo.ne.jp/info/" class="news-more-link">すべての記事一覧へ →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 企業情報 -->
+        <section class="corporate-section">
+            <div class="container">
+                <h2 class="section-title">企業情報</h2>
+                <div class="corporate-grid">
+                    <a href="https://www.docomo.ne.jp/corporate/?icid=CRP_TOP_txt01_to_CRP_CORP_about" class="corporate-item">
+                        <h3>企業情報 トップ</h3>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/corporate/anatatodocomo/?icid=CRP_TOP_txt01_to_CRP_CORP_anatatodocomo" class="corporate-item">
+                        <h3>あなたとドコモ</h3>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/corporate/philosophy_vision/?icid=CRP_TOP_txt01_to_CRP_CORP_philosophy_vision" class="corporate-item">
+                        <h3>企業理念・ビジョン</h3>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/corporate/about/?icid=CRP_TOP_txt01_to_CRP_CORP_about" class="corporate-item">
+                        <h3>会社案内</h3>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/corporate/csr/?icid=CRP_TOP_txt01_to_CRP_CORP_csr" class="corporate-item">
+                        <h3>サステナビリティ</h3>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/corporate/technology_safety/?icid=CRP_TOP_txt01_to_CRP_CORP_technology_safety" class="corporate-item">
+                        <h3>技術とあんしん</h3>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/corporate/ir/library/?icid=CRP_TOP_txt01_to_CRP_CORP_ir_library" class="corporate-item">
+                        <h3>IR情報</h3>
+                    </a>
+                    <a href="https://www.docomo.ne.jp/corporate/recruit/?icid=CRP_TOP_txt01_to_CRP_CORP_recruit" class="corporate-item">
+                        <h3>採用情報</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <h3>SNS公式アカウント</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="X">𝕏</a>
+                    <a href="#" class="social-icon" aria-label="LINE">LINE</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                    <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">サイトマップ</a></li>
+                    <li><a href="/privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">個人情報保護方針</a></li>
+                    <li><a href="#">Cookie設定</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; NTT DOCOMO, INC. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/firebase-config.js"></script>
+    <script type="module" src="/header-auth.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

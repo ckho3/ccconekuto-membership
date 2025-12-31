@@ -1,0 +1,290 @@
+/* プライバシーポリシーページ専用スタイル */
+
+/* ヒーローセクション */
+.privacy-hero {
+    background: #2c4f8d;
+    padding: 120px 0 80px;
+    margin-top: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.privacy-hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.privacy-hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+/* コンテンツセクション */
+.privacy-content-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.privacy-note {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+}
+
+.privacy-note p {
+    margin: 0;
+    color: #856404;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ポリシーセクション */
+.policy-section {
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.policy-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c4f8d;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #2c4f8d;
+}
+
+.policy-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.policy-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.policy-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 16px;
+}
+
+.policy-section ul li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.policy-section ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2c4f8d;
+    font-weight: bold;
+}
+
+/* 事業者情報 */
+.company-info {
+    background-color: #f8f9fa;
+    padding: 24px;
+    border-radius: 8px;
+    margin-top: 32px;
+}
+
+.company-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c4f8d;
+    margin-bottom: 16px;
+}
+
+.company-info dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px 16px;
+}
+
+.company-info dt {
+    font-weight: 600;
+    color: #555;
+}
+
+.company-info dd {
+    margin: 0;
+    color: #333;
+}
+
+.company-info dd a {
+    color: #2c4f8d;
+    text-decoration: none;
+}
+
+.company-info dd a:hover {
+    text-decoration: underline;
+}
+
+/* 最終改定日 */
+.revision-date {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e0e0e0;
+    text-align: right;
+}
+
+.revision-date p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.revision-date strong {
+    color: #2c4f8d;
+}
+
+/* フッター */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.footer-social {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.footer-social h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    font-size: 24px;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icon:hover {
+    background-color: #2c4f8d;
+    transform: translateY(-3px);
+}
+
+.footer-links {
+    margin-bottom: 30px;
+}
+
+.footer-links ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #999;
+    font-size: 14px;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 767px) {
+    .privacy-hero {
+        padding: 80px 0 60px;
+    }
+
+    .privacy-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .privacy-hero-content p {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .policy-section {
+        padding: 24px 20px;
+        margin-bottom: 24px;
+    }
+
+    .policy-title {
+        font-size: 22px;
+    }
+
+    .policy-subtitle {
+        font-size: 18px;
+    }
+
+    .policy-section p,
+    .policy-section ul li {
+        font-size: 14px;
+    }
+
+    .company-info {
+        padding: 20px;
+    }
+
+    .company-info dl {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .company-info dt {
+        font-weight: 700;
+        margin-top: 12px;
+    }
+
+    .company-info dt:first-child {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイページ - CCコネクト</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/auth.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-container">
+            <!-- ロゴ -->
+            <div class="header-logo">
+                <a href="/" class="logo-link">
+                    <img src="/ccc-logo.png" alt="CCコネクト" height="32">
+                </a>
+            </div>
+
+            <!-- メインナビゲーション -->
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">
+                            <span>商品・サービス</span>
+                            <svg class="nav-arrow" width="10" height="6" viewBox="0 0 10 6">
+                                <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="dropdown-section">
+                                    <h3 class="dropdown-title">モバイル</h3>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#">iPhone</a></li>
+                                        <li><a href="#">iPad</a></li>
+                                        <li><a href="#">Xperia</a></li>
+                                        <li><a href="#">Galaxy</a></li>
+                                        <li><a href="#">AQUOS</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-section">
+                                    <h3 class="dropdown-title">その他</h3>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#">Macbook</a></li>
+                                        <li><a href="#">WindowsPC</a></li>
+                                        <li><a href="#">イベント商品</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-section">
+                                    <h3 class="dropdown-title">買取・回収</h3>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#">ガジェット回収.com</a></li>
+                                        <li><a href="#">買取価格表</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-section">
+                                    <h3 class="dropdown-title">システム開発</h3>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#">爆速開発シリーズ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span>お知らせ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/corporate.html" class="nav-link">
+                            <span>企業情報</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/solutions.html" class="nav-link">
+                            <span>法人のお客さま</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 右側アクション -->
+            <div class="header-actions">
+                <a href="https://ccconekuto.com/" class="header-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="header-icon" width="18" height="18" viewBox="0 0 16 16">
+                        <path d="M13 6h-2V4c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v2H3c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h10c.6 0 1-.4 1-1V7c0-.6-.4-1-1-1zM7 4h2v2H7V4z" fill="currentColor"/>
+                    </svg>
+                    <span>オンラインショップ</span>
+                </a>
+                <a href="/profile.html" class="btn-login">
+                    <span id="headerUserName">マイページ</span>
+                </a>
+            </div>
+
+            <!-- モバイルメニュートグル -->
+            <button class="menu-toggle" id="menuToggle">
+                <span class="menu-toggle-line"></span>
+                <span class="menu-toggle-line"></span>
+                <span class="menu-toggle-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <!-- ヒーローセクション -->
+        <section class="auth-hero">
+            <div class="auth-hero-content">
+                <h1>マイページ</h1>
+                <p>My Page</p>
+            </div>
+        </section>
+
+        <!-- プロフィールセクション -->
+        <section class="auth-content-section">
+            <div class="container">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar" id="profileAvatar">
+                            U
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="profileName">読み込み中...</h2>
+                            <p id="profileEmail"></p>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <div class="profile-item">
+                            <span class="profile-item-label">会員ID:</span>
+                            <span class="profile-item-value" id="profileId">-</span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="profile-item-label">登録日:</span>
+                            <span class="profile-item-value" id="profileCreatedAt">-</span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="profile-item-label">最終ログイン:</span>
+                            <span class="profile-item-value" id="profileLastLogin">-</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 32px;">
+                        <button class="btn-primary" id="logoutBtn" style="background-color: #dc3545;">
+                            <span id="logoutBtnText">ログアウト</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <h3>SNS公式アカウント</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="X">𝕏</a>
+                    <a href="#" class="social-icon" aria-label="LINE">LINE</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                    <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">サイトマップ</a></li>
+                    <li><a href="/privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">個人情報保護方針</a></li>
+                    <li><a href="#">Cookie設定</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; CCコネクト All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/firebase-config.js"></script>
+    <script type="module" src="/auth-profile.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
