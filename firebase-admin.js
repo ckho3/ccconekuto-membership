@@ -3,26 +3,36 @@ const admin = require('firebase-admin');
 require('dotenv').config();
 
 // Firebase Admin SDKを初期化
-// 開発環境用: Application Default Credentials を使用
 if (!admin.apps.length) {
     try {
-        // 環境変数にサービスアカウントキーのパスがあれば使用
-        if (process.env.FIREBASE_SERVICE_ACCOUNT_KEY_PATH) {
+        // Vercel環境: 環境変数からJSON文字列を読み込む
+        if (process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
+            const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
+            admin.initializeApp({
+                credential: admin.credential.cert(serviceAccount)
+            });
+            console.log('✅ Firebase Admin SDK initialized with service account from env variable');
+        }
+        // ローカル環境: ファイルパスから読み込む
+        else if (process.env.FIREBASE_SERVICE_ACCOUNT_KEY_PATH) {
             const serviceAccount = require(process.env.FIREBASE_SERVICE_ACCOUNT_KEY_PATH);
             admin.initializeApp({
                 credential: admin.credential.cert(serviceAccount)
             });
-        } else {
-            // 開発環境: プロジェクトIDのみで初期化（制限付き）
+            console.log('✅ Firebase Admin SDK initialized with service account from file');
+        }
+        // フォールバック: プロジェクトIDのみで初期化（制限付き）
+        else {
             admin.initializeApp({
                 projectId: process.env.FIREBASE_PROJECT_ID
             });
+            console.log('⚠️  Firebase Admin SDK initialized with project ID only (limited functionality)');
         }
-        console.log('✅ Firebase Admin SDK initialized successfully');
     } catch (error) {
         console.error('❌ Firebase Admin SDK initialization error:', error.message);
         console.log('⚠️  サービスアカウントキーが必要です。');
         console.log('   Firebaseコンソール > プロジェクト設定 > サービスアカウント > 新しい秘密鍵の生成');
+        throw error;
     }
 }
 
