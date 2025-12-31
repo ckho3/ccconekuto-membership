@@ -26,17 +26,22 @@ app.use((req, res) => {
     res.status(404).send('ページが見つかりません');
 });
 
-// サーバー起動
-app.listen(PORT, () => {
-    console.log(`\n========================================`);
-    console.log(`  CCコネクト会員システムが起動しました!`);
-    console.log(`========================================`);
-    console.log(`  URL: http://localhost:${PORT}`);
-    console.log(`  スマレジAPI: http://localhost:${PORT}/api/smaregi`);
-    console.log(`========================================\n`);
-    console.log(`ブラウザで http://localhost:${PORT} を開いてください。`);
-    console.log(`サーバーを停止するには Ctrl+C を押してください。\n`);
-});
+// Vercel環境ではサーバー起動をスキップ（module.exportsで対応）
+if (process.env.NODE_ENV !== 'production') {
+    // ローカル開発環境のみサーバー起動
+    app.listen(PORT, () => {
+        console.log(`\n========================================`);
+        console.log(`  CCコネクト会員システムが起動しました!`);
+        console.log(`========================================`);
+        console.log(`  URL: http://localhost:${PORT}`);
+        console.log(`  スマレジAPI: http://localhost:${PORT}/api/smaregi`);
+        console.log(`========================================\n`);
+        console.log(`ブラウザで http://localhost:${PORT} を開いてください。`);
+        console.log(`サーバーを停止するには Ctrl+C を押してください。\n`);
+    });
+} else {
+    console.log('Legacy server listening...');
+}
 
 // エラーハンドリング
 process.on('uncaughtException', (err) => {
@@ -47,3 +52,6 @@ process.on('uncaughtException', (err) => {
 process.on('unhandledRejection', (reason, promise) => {
     console.error('未処理のPromise拒否:', reason);
 });
+
+// Vercel用にappをエクスポート
+module.exports = app;
